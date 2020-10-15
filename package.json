@@ -1,0 +1,19 @@
+{
+  "name": "setting-up-a-server",
+  "version": "1.0.0",
+  "description": "setting up a server with Node.js and express testing on Postman.co making simples functionalities",
+  "main": "script.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Jowd",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "knex": "^0.21.6",
+    "nodemon": "^2.0.4",
+    "pg": "^8.4.1"
+  }
+}
