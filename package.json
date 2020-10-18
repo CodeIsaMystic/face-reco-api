@@ -4,7 +4,8 @@
   "description": "setting up a server with Node.js and express testing on Postman.co making simples functionalities",
   "main": "script.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js",
+    "start:dev": "nodemon server.js"
   },
   "author": "Jowd",
   "license": "ISC",
