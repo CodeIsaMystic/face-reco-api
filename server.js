@@ -22,17 +22,10 @@ const db = knex({
   }
 });
 
-
-
 const app = express();
 
-
-
-app.use(bodyParser.json());
 app.use(cors());
-
-
-
+app.use(bodyParser.json());
 
 
 /**  Giving an idea....
@@ -51,7 +44,6 @@ app.use(cors());
  *    --> PUT return user object
  * 
  * 
- * 
  *   on terminal :
  * 
  * run => 'npm start' command
@@ -59,9 +51,6 @@ app.use(cors());
  * will launch the command set on package.json
  *     => 'node server.js'
  */
-
-
-
 
 
 app.get('/', (req, res) => {
@@ -86,7 +75,6 @@ app.post('/register', (req, res) =>  { register.handleRegister(req, res, db, bcr
 app.get('/profile/:id', (req, res) => { profile.handleGetProfile(req, res, db);});
 
 
-
 /**
  *  handleUpdateEntries function with dependency injection as param db 
  */
@@ -98,23 +86,10 @@ app.put('/image', (req, res) => {image.handleUpdateEntries(req, res, db);});
 app.post('/imageurl', (req, res) => {image.handleApiCall(req, res);});
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**
  *  .listen on port 3000
  *  & confirm with console.log
  */
-app.listen(3000, () => {
-  console.log('app is running on port 3000');
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`app is running on port ${process.env.PORT}`);
 });
